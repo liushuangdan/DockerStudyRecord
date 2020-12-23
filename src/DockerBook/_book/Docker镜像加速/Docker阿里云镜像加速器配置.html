@@ -1,0 +1,340 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <title>Docker的镜像加速 · GitBook</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.0.0">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Docker运行hello-world/Docker运行hello-world.html" />
+    
+    
+    <link rel="prev" href="../Docker安装/docker安装流程Linux.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Docker个人学习笔记
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Docker概念/docker基础概念.html">
+            
+                <a href="../Docker概念/docker基础概念.html">
+            
+                    
+                    Docker概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Docker安装/docker安装流程Linux.html">
+            
+                <a href="../Docker安装/docker安装流程Linux.html">
+            
+                    
+                    Docker安装说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="Docker阿里云镜像加速器配置.html">
+            
+                <a href="Docker阿里云镜像加速器配置.html">
+            
+                    
+                    Docker的镜像加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Docker运行hello-world/Docker运行hello-world.html">
+            
+                <a href="../Docker运行hello-world/Docker运行hello-world.html">
+            
+                    
+                    Docker运行hello-world
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Docker的镜像加速</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="docker&#x963F;&#x91CC;&#x4E91;&#x955C;&#x50CF;&#x52A0;&#x901F;&#x5668;&#x914D;&#x7F6E;">Docker&#x963F;&#x91CC;&#x4E91;&#x955C;&#x50CF;&#x52A0;&#x901F;&#x5668;&#x914D;&#x7F6E;</h2>
+<h4 id="&#x963F;&#x91CC;&#x4E91;&#x955C;&#x50CF;&#x52A0;&#x901F;">&#x963F;&#x91CC;&#x4E91;&#x955C;&#x50CF;&#x52A0;&#x901F;</h4>
+<ol>
+<li>&#x662F;&#x4EC0;&#x4E48;&#xFF1F;</li>
+</ol>
+<p>&#x200B;       <a href="https://dev.aliyun.com/search.html" _target="blank">https://dev.aliyun.com/search.html</a></p>
+<ol>
+<li><p>&#x6CE8;&#x518C;&#x4E00;&#x4E2A;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;&#x963F;&#x91CC;&#x4E91;&#x8D26;&#x6237;&#xFF08;&#x53EF;&#x4EE5;&#x590D;&#x7528;&#x6DD8;&#x5B9D;&#x8D26;&#x53F7;&#xFF09;</p>
+</li>
+<li><p>&#x83B7;&#x5F97;&#x52A0;&#x901F;&#x5668;&#x5730;&#x5740;&#x8FDE;&#x63A5;</p>
+<ol>
+<li>&#x767B;&#x9646;&#x963F;&#x91CC;&#x4E91;&#x5F00;&#x53D1;&#x5E73;&#x53F0;</li>
+<li>&#x83B7;&#x5F97;&#x52A0;&#x901F;&#x5668;&#x5730;&#x5740;</li>
+</ol>
+</li>
+<li><p>&#x914D;&#x7F6E;&#x672C;&#x673A;Docker&#x8FD0;&#x884C;&#x955C;&#x50CF;&#x52A0;&#x901F;&#x5668;</p>
+</li>
+<li><p>&#x91CD;&#x65B0;&#x542F;&#x52A8;Docker&#x540E;&#x53F0;&#x670D;&#x52A1;&#xFF1A;systemctl start docker</p>
+</li>
+<li><p>Linux&#x7CFB;&#x7EDF;&#x4E0B;&#x914D;&#x7F6E;&#x5B8C;&#x6210;&#x52A0;&#x901F;&#x5668;&#x9700;&#x8981;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x751F;&#x6548;</p>
+<p>ps -ef|grep docker</p>
+</li>
+</ol>
+<hr>
+<h4 id="&#x7F51;&#x6613;&#x4E91;&#x52A0;&#x901F;">&#x7F51;&#x6613;&#x4E91;&#x52A0;&#x901F;</h4>
+<p>&quot;<a href="https://hub-mirror.c.162.com" _target="blank">https://hub-mirror.c.162.com</a>&quot;</p>
+<p>&#x540C;&#x4E0B;&#xFF0C;json&#x6587;&#x4EF6;&#x4E2D;&#x52A0;&#x901F;&#x5730;&#x5740;&#x6539;&#x4E3A; &#x4E0A;&#x8FF0;&#xFF0C;&#x5373;&#x4E3A;&#x7F51;&#x6613;&#x4E91;&#x52A0;&#x901F;&#x3002; &#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x963F;&#x91CC;&#x4E91;&#x52A0;&#x901F;&#x5668;&#x3002; &#x66F4;&#x5168;&#x9762;&#x3002; </p>
+<hr>
+<h3 id="&#x914D;&#x7F6E;&#x672C;&#x673A;docker&#x8FD0;&#x884C;&#x955C;&#x50CF;&#x52A0;&#x901F;&#x5668;">&#x914D;&#x7F6E;&#x672C;&#x673A;Docker&#x8FD0;&#x884C;&#x955C;&#x50CF;&#x52A0;&#x901F;&#x5668;</h3>
+<p>&#x9274;&#x4E8E;&#x56FD;&#x5185;&#x7F51;&#x7EDC;&#x95EE;&#x9898;&#xFF0C;&#x540E;&#x7EED;&#x62C9;&#x53D6;Docker&#x955C;&#x50CF;&#x5341;&#x5206;&#x7F13;&#x6162;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x52A0;&#x901F;&#x5668;&#x6765;&#x89E3;&#x51B3;&#x3002;</p>
+<p>&#x6211;&#x4F7F;&#x7528;&#x7684;&#x662F;&#x963F;&#x91CC;&#x4E91;&#x7684;&#x672C;&#x4EBA;&#x8D26;&#x53F7;&#x7684;&#x955C;&#x50CF;&#x5730;&#x5740;&#xFF08;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x6CE8;&#x518C;&#x6709;&#x4E00;&#x4E2A;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;&#xFF09;&#xFF1A;<a href="https://xxx.mirror.aliyuncs.com" _target="blank">https://xxx.mirror.aliyuncs.com</a></p>
+<ul>
+<li><p>vim /etc/sysconfig/docker centos6.8&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<p>&#x5C06;&#x83B7;&#x5F97;&#x7684;&#x81EA;&#x5DF1;&#x7684;&#x8D26;&#x6237;&#x4E0B;&#x7684;&#x963F;&#x91CC;&#x4E91;&#x52A0;&#x901F;&#x5730;&#x5740;&#x914D;&#x7F6E;&#x8FDB;  other_args=&quot;--registry-mirror=<a href="https://&#x81EA;&#x5DF1;&#x7684;&#x8D26;&#x53F7;&#x52A0;&#x901F;&#x4FE1;&#x606F;.mirror.aliyun.com" _target="blank">https://&#x81EA;&#x5DF1;&#x7684;&#x8D26;&#x53F7;&#x52A0;&#x901F;&#x4FE1;&#x606F;.mirror.aliyun.com</a>&quot;</p>
+</li>
+<li><p>vim /etc/docker/daemon.json centos7 &#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;</p>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x9700;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#xFF1A; sudo mkdir -p /etc/docker
+sudo tee /etc/docker/daemon.json &lt;&lt;-&apos;EOF&apos;
+{
+&quot;registry-mirrors&quot;: [&quot;<a href="https://9luj2x1c.mirror.aliyuncs.com" _target="blank">https://9luj2x1c.mirror.aliyuncs.com</a>&quot;]
+}
+EOF</p>
+<p>&#x91CD;&#x542F;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A; sudo systemctl daemon-reload
+&#x91CD;&#x542F;docker&#x670D;&#x52A1;&#xFF1A; sudo systemctl restart docker</p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Docker安装/docker安装流程Linux.html" class="navigation navigation-prev " aria-label="Previous page: Docker安装说明">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Docker运行hello-world/Docker运行hello-world.html" class="navigation navigation-next " aria-label="Next page: Docker运行hello-world">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Docker的镜像加速","level":"1.5","depth":1,"next":{"title":"Docker运行hello-world","level":"1.6","depth":1,"path":"Docker运行hello-world/Docker运行hello-world.md","ref":"Docker运行hello-world/Docker运行hello-world.md","articles":[]},"previous":{"title":"Docker安装说明","level":"1.4","depth":1,"path":"Docker安装/docker安装流程Linux.md","ref":"Docker安装/docker安装流程Linux.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Docker镜像加速/Docker阿里云镜像加速器配置.md","mtime":"2020-06-24T08:42:20.102Z","type":"markdown"},"gitbook":{"version":"3.0.0","time":"2020-06-24T09:32:47.224Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/buttons.js"></script>
+        
+    
+
+    </body>
+</html>
+
