@@ -1,8 +1,8 @@
 <!--
  * @Author: liushuangdan
  * @Date: 2020-10-23 11:28:31
- * @LastEditTime: 2020-12-02 15:50:48
- * @LastEditors: VScode
+ * @LastEditTime: 2021-02-01 18:43:20
+ * @LastEditors: Please set LastEditors
  * @Description: 
  * @FilePath: \DockerBook\Docker容器数据卷.md
 -->
@@ -98,15 +98,27 @@
         - /dataVolumeContainer1
         - /dataVolumeContainer2
     - 容器间传递共享(-volumes-from)
-      - 先启动一个父容器dc01  然后在dataVolumeContainer2新增内容
+      - 先启动一个父容器dc01 
+  
+- ![dc01](/./images/dc01.png)    
+
+      -  然后在dataVolumeContainer2新增内容
       - dc02/dc03 继承自dc01   
         -  --volumes -from
         -  命令 
+        -  docker run -it --name dc02 --volumes-from dc01 zzyy/centos
+- ![继承dc01](/./images/继承dc01.png)      
         -  dc02/dc03 分别在dataVolumeContainer2各自新增内容
      -  回到dc01可以看到02/03各自添加的都能共享了
+- ![sharedc01](/./images/sharedc01.png)
      -  删除dc01， dc02 修改后 dc03 可否访问
+-  ![delete_dc01](/./images/delete_dc01.png)
      -  删除dc02 后 dc03 可否访问
+-  ![delete_dc02](/./images/delete_dc02.png)
+     -  再进一步
+-  ![more_step](/./images/more_step.png) 
      -  新建dc04 继承dc03后再删除dc03
+-  ![delete_dc03](/./images/delete_dc03.png)
      -  结论： 容器之间配置信息的传递， 数据卷的生命周期一直持续到没有容器使用它为止
 
 
