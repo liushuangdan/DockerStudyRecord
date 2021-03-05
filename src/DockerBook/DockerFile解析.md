@@ -3,7 +3,7 @@
  * @Description: 
  * @Author: liushuangdan
  * @Date: 2021-02-01 18:07:46
- * @LastEditTime: 2021-02-03 16:24:41
+ * @LastEditTime: 2021-02-22 14:21:56
  * @FilePath: \DockerBook\DockerFile解析.md
 -->
 
@@ -107,5 +107,43 @@ Dockerfile面向开发， Docker镜像成为交付标准， Docker容器则涉�
 ##### 总结
 
 ![](/./images/dockerFile/docker_file_command.png)
+
+
+----
+
+### docker file 案例
+
+#### Base镜像(scratch) 
+
+Docker Hub中99%的镜像都是通过在base镜像中安装和配置需要的软件构建出来的
+
+![](/./images/dockerFile/scratch.png)
+
+#### 自定义镜像 centos
+
+1. 编写
+   1. Hub默认centos镜像什么情况
+      1. 初始centos运行该镜像时默认在/目录下
+      2. 默认不支持vim编辑器
+      3. 默认不支持ifconfig查看网络配置
+   2. 准备编写Dockerfile文件
+   3. mycentos内容Dockerfile
+      1. FROM centos
+      2. MAINTAINER liushuangdan@csm.com.cn
+      3. ENV MYPATH /usr/local
+      4. WORKDIR $MYPATH
+      5. RUN yum -y install vim
+      6. RUN yum -y install net-tools
+      7. EXPOSE 80
+      8. CMD echo $MYPATH
+      9. CMD echo "success ---- ok"
+      10. CMD /bin/bash
+2. 构建
+   1. docker build -t 新镜像名字:TAG .
+3. 运行
+   1. docker run -it 新镜像名字:TAG 
+4. 列出镜像的变更历史
+   * docker history 镜像名
+
 
 
