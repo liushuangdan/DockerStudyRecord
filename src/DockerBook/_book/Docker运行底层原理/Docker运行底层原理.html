@@ -1,0 +1,471 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Docker运行底层原理 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="../Docker运行hello-world/Docker运行hello-world.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Docker个人学习笔记
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    简介
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Docker概念/docker基础概念.html">
+            
+                <a href="../Docker概念/docker基础概念.html">
+            
+                    
+                    Docker概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Docker安装/docker安装流程Linux.html">
+            
+                <a href="../Docker安装/docker安装流程Linux.html">
+            
+                    
+                    Docker安装说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Docker镜像加速/Docker阿里云镜像加速器配置.html">
+            
+                <a href="../Docker镜像加速/Docker阿里云镜像加速器配置.html">
+            
+                    
+                    Docker的镜像加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Docker运行hello-world/Docker运行hello-world.html">
+            
+                <a href="../Docker运行hello-world/Docker运行hello-world.html">
+            
+                    
+                    Docker运行hello-world
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.5" data-path="Docker运行底层原理.html">
+            
+                <a href="Docker运行底层原理.html">
+            
+                    
+                    Docker运行底层原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    命令
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Docker常用命令.html">
+            
+                <a href="../Docker常用命令.html">
+            
+                    
+                    Docker常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Docker镜像命令.html">
+            
+                <a href="../Docker镜像命令.html">
+            
+                    
+                    Docker镜像命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Docker容器命令.html">
+            
+                <a href="../Docker容器命令.html">
+            
+                    
+                    Docker容器命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    原理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Docker镜像.html">
+            
+                <a href="../Docker镜像.html">
+            
+                    
+                    Docker镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Docker容器数据卷.html">
+            
+                <a href="../Docker容器数据卷.html">
+            
+                    
+                    Docker容器数据卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Docker运行底层原理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="docker&#x8FD0;&#x884C;&#x5E95;&#x5C42;&#x539F;&#x7406;">Docker&#x8FD0;&#x884C;&#x5E95;&#x5C42;&#x539F;&#x7406;</h2>
+<h4 id="docker&#x662F;&#x600E;&#x4E48;&#x5DE5;&#x4F5C;&#x7684;">Docker&#x662F;&#x600E;&#x4E48;&#x5DE5;&#x4F5C;&#x7684;</h4>
+<hr>
+<p>Docker&#x662F;&#x4E00;&#x4E2A;Client-Server&#x7684;&#x7ED3;&#x6784;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;Docker&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#x5728;&#x4E3B;&#x673A;&#x4E0A;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;Socket&#x8FDE;&#x63A5;&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x8BBF;&#x95EE;&#xFF0C;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x4ECE;&#x5BA2;&#x6237;&#x7AEF;&#x63A5;&#x53D7;&#x547D;&#x4EE4;&#x5E76;&#x7BA1;&#x7406;&#x8FD0;&#x884C;&#x5728;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x5BB9;&#x5668;&#x3002;</p>
+<p>&#x5BB9;&#x5668;&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x65F6;&#x73AF;&#x5883;&#xFF0C;&#x5C31;&#x662F;&#x6211;&#x4EEC;&#x524D;&#x9762;&#x8BF4;&#x5230;&#x7684;&#x96C6;&#x88C5;&#x7BB1;&#x3002; </p>
+<h4 id="docker&#x4E3A;&#x4EC0;&#x4E48;&#x6BD4;vm&#x5FEB;">Docker&#x4E3A;&#x4EC0;&#x4E48;&#x6BD4;VM&#x5FEB;</h4>
+<p>&#xFF08;1&#xFF09; docker&#x6709;&#x7740;&#x6BD4;&#x865A;&#x62DF;&#x673A;&#x66F4;&#x5C11;&#x7684;&#x62BD;&#x8C61;&#x5C42;&#x3002;&#x7531;&#x4E8E;docker&#x4E0D;&#x9700;&#x8981;Hypervisor&#x5B9E;&#x73B0;&#x786C;&#x4EF6;&#x8D44;&#x6E90;&#x865A;&#x62DF;&#x5316;&#xFF0C;&#x8FD0;&#x884C;&#x5728;docker&#x5BB9;&#x5668;&#x4E0A;&#x7684;&#x7A0B;&#x5E8F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x7684;&#x90FD;&#x662F;&#x5B9E;&#x9645;&#x7269;&#x7406;&#x673A;&#x7684;&#x786C;&#x4EF6;&#x8D44;&#x6E90;&#x3002;&#x56E0;&#x6B64;&#x5728;CPU&#x3001;&#x5185;&#x5B58;&#x5229;&#x7387;&#x4E0A;docker&#x5C06;&#x4F1A;&#x5728;&#x6548;&#x7387;&#x4E0A;&#x6709;&#x660E;&#x663E;&#x4F18;&#x52BF;&#x3002; </p>
+<p>&#xFF08;2) docker&#x5229;&#x7528;&#x7684;&#x662F;&#x5BBF;&#x4E3B;&#x673A;&#x7684;&#x5185;&#x6838;&#xFF0C;&#x800C;&#x4E0D;&#x9700;&#x8981;Guest OS&#x3002; &#x56E0;&#x6B64;&#xFF0C;&#x5F53;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x65F6;&#xFF0C; docker&#x4E0D;&#x9700;&#x8981;&#x548C;&#x865A;&#x62DF;&#x673A;&#x4E00;&#x6837;&#x52A0;&#x8F7D;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x3002;&#x4ECD;&#x800C;&#x907F;&#x514D;&#x5F15;&#x5BFB;&#x3001;&#x52A0;&#x8F7D;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x662F;&#x4E2A;&#x6BD4;&#x8F83;&#x8D39;&#x65F6;&#x8D39;&#x8D44;&#x6E90;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x5F53;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x673A;&#x65F6;&#xFF0C;&#x865A;&#x62DF;&#x673A;&#x8F6F;&#x4EF6;&#x9700;&#x8981;&#x52A0;&#x8F7D;Guest OS&#xFF0C; &#x8FD4;&#x4E2A;&#x65B0;&#x5EFA;&#x8FC7;&#x7A0B;&#x662F;&#x5206;&#x949F;&#x7EA7;&#x522B;&#x7684;&#x3002;&#x800C;docker&#x7531;&#x4E8E;&#x76F4;&#x63A5;&#x5229;&#x7528;&#x5BBF;&#x4E3B;&#x673A;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x5219;&#x5FFD;&#x7565;&#x4E86;&#x8FD4;&#x4E2A;&#x8FC7;&#x7A0B;&#xFF0C; &#x56E0;&#x6B64;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;docker&#x5BB9;&#x5668;&#x53EA;&#x9700;&#x8981;&#x51E0;&#x79D2;&#x949F;&#x3002;</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Docker&#x5BB9;&#x5668;</th>
+<th>&#x865A;&#x62DF;&#x673A;&#xFF08;VM&#xFF09;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;</td>
+<td>&#x4E0E;&#x5BBF;&#x4E3B;&#x673A;&#x5171;&#x4EAB;OS</td>
+<td>&#x5BBF;&#x4E3B;&#x673A;OS&#x4E0A;&#x8FD0;&#x884C;&#x865A;&#x62DF;&#x673A;OS</td>
+</tr>
+<tr>
+<td>&#x5B58;&#x50A8;&#x5927;&#x5C0F;</td>
+<td>&#x955C;&#x50CF;&#x5C0F;&#xFF0C;&#x4FBF;&#x4E8E;&#x5B58;&#x50A8;&#x4E0E;&#x4F20;&#x8F93;</td>
+<td>&#x955C;&#x50CF;&#x5E9E;&#x5927;&#xFF08;vmdk&#x3001;vdi&#xFF09;</td>
+</tr>
+<tr>
+<td>&#x8FD0;&#x884C;&#x6027;&#x8D28;</td>
+<td>&#x51E0;&#x4E4E;&#x65E0;&#x989D;&#x5916;&#x6027;&#x80FD;&#x635F;&#x5931;</td>
+<td>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x989D;&#x5916;&#x7684;CPU&#x3001;&#x5185;&#x5B58;&#x6D88;&#x8017;</td>
+</tr>
+<tr>
+<td>&#x79FB;&#x690D;&#x6027;</td>
+<td>&#x8F7B;&#x4FBF;&#x3001;&#x7075;&#x6D3B;&#xFF0C;&#x9002;&#x5E94;&#x4E8E;Linux</td>
+<td>&#x7B28;&#x91CD;&#xFF0C;&#x4E0E;&#x865A;&#x62DF;&#x5316;&#x6280;&#x672F;&#x8026;&#x5408;&#x5EA6;&#x9AD8;</td>
+</tr>
+<tr>
+<td>&#x786C;&#x4EF6;&#x4EB2;&#x548C;&#x6027;</td>
+<td>&#x9762;&#x5411;&#x8F6F;&#x4EF6;&#x5F00;&#x53D1;&#x8005;</td>
+<td>&#x9762;&#x5411;&#x786C;&#x4EF6;&#x8FD0;&#x7EF4;&#x8005;</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../Docker运行hello-world/Docker运行hello-world.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Docker运行hello-world">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Docker运行底层原理","level":"1.3.5","depth":2,"next":{"title":"命令","level":"1.4","depth":1,"ref":"","articles":[{"title":"Docker常用命令","level":"1.4.1","depth":2,"path":"Docker常用命令.md","ref":"Docker常用命令.md","articles":[]},{"title":"Docker镜像命令","level":"1.4.2","depth":2,"path":"Docker镜像命令.md","ref":"Docker镜像命令.md","articles":[]},{"title":"Docker容器命令","level":"1.4.3","depth":2,"path":"Docker容器命令.md","ref":"Docker容器命令.md","articles":[]}]},"previous":{"title":"Docker运行hello-world","level":"1.3.4","depth":2,"path":"Docker运行hello-world/Docker运行hello-world.md","ref":"Docker运行hello-world/Docker运行hello-world.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Docker运行底层原理/Docker运行底层原理.md","mtime":"2020-12-23T06:21:06.500Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-18T09:13:43.084Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

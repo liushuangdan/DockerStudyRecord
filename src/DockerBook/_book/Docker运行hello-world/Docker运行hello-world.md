@@ -33,3 +33,7 @@ This message shows that your installation appears to be working correctly.
 出现这个说明docker 运行hello world 成功。
 
 输出这段文字提示以后，hello-world就会停止运行，容器自动中止。 
+
+
+run都做了些什么，如下图所示：
+![run干了什么](/./images/run干了什么.png)
