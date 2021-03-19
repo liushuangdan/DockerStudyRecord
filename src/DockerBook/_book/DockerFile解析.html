@@ -1,0 +1,763 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>DockerFile解析 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="Docker常用安装.html" />
+    
+    
+    <link rel="prev" href="Docker容器数据卷.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    简介
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="Docker概念/docker基础概念.html">
+            
+                <a href="Docker概念/docker基础概念.html">
+            
+                    
+                    Docker概念
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="Docker安装/docker安装流程Linux.html">
+            
+                <a href="Docker安装/docker安装流程Linux.html">
+            
+                    
+                    Docker安装说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="Docker镜像加速/Docker阿里云镜像加速器配置.html">
+            
+                <a href="Docker镜像加速/Docker阿里云镜像加速器配置.html">
+            
+                    
+                    Docker的镜像加速
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="Docker运行hello-world/Docker运行hello-world.html">
+            
+                <a href="Docker运行hello-world/Docker运行hello-world.html">
+            
+                    
+                    Docker运行hello-world
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="Docker运行底层原理/Docker运行底层原理.html">
+            
+                <a href="Docker运行底层原理/Docker运行底层原理.html">
+            
+                    
+                    Docker运行底层原理
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    命令
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="Docker常用命令.html">
+            
+                <a href="Docker常用命令.html">
+            
+                    
+                    Docker常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="Docker镜像命令.html">
+            
+                <a href="Docker镜像命令.html">
+            
+                    
+                    Docker镜像命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="Docker容器命令.html">
+            
+                <a href="Docker容器命令.html">
+            
+                    
+                    Docker容器命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    原理
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="Docker镜像.html">
+            
+                <a href="Docker镜像.html">
+            
+                    
+                    Docker镜像
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Docker容器数据卷.html">
+            
+                <a href="Docker容器数据卷.html">
+            
+                    
+                    Docker容器数据卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="DockerFile解析.html">
+            
+                <a href="DockerFile解析.html">
+            
+                    
+                    DockerFile解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="Docker常用安装.html">
+            
+                <a href="Docker常用安装.html">
+            
+                    
+                    Docker常用安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="本地镜像发布到阿里云.html">
+            
+                <a href="本地镜像发布到阿里云.html">
+            
+                    
+                    本地镜像发布到阿里云
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >DockerFile解析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <!--
+ * @Filename: 
+ * @Description: 
+ * @Author: liushuangdan
+ * @Date: 2021-02-01 18:07:46
+ * @LastEditTime: 2021-03-19 11:08:57
+ * @FilePath: \DockerBook\DockerFile解析.md
+-->
+<h2 id="dockerfile">DockerFile</h2>
+<h3 id="&#x4EC0;&#x4E48;&#x662F;dockerfile">&#x4EC0;&#x4E48;&#x662F;DockerFile</h3>
+<ol>
+<li>&#x624B;&#x52A8;&#x7F16;&#x5199;&#x4E00;&#x4E2A;dockerfile&#x6587;&#x4EF6;&#xFF0C; &#x5FC5;&#x987B;&#x7B26;&#x5408;file &#x7684;&#x89C4;&#x8303;</li>
+<li>&#x6709;&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x540E;&#xFF0C; &#x76F4;&#x63A5;docker build&#x547D;&#x4EE4;&#x6267;&#x884C; &#x83B7;&#x5F97;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x955C;&#x50CF;</li>
+<li>run</li>
+</ol>
+<p>&#x7C7B;&#x4F3C;&#xFF1A;
+maven build
+jar
+java -jar ms....</p>
+<h3 id="&#x5B9A;&#x4E49;">&#x5B9A;&#x4E49;</h3>
+<p> DockerFile &#x662F;&#x7528;&#x6765;&#x6784;&#x5EFA;Docker&#x955C;&#x50CF;&#x7684;&#x6784;&#x5EFA;&#x6587;&#x4EF6;&#xFF0C; &#x662F;&#x7531;&#x4E00;&#x7CFB;&#x5217;&#x547D;&#x4EE4;&#x548C;&#x53C2;&#x6570;&#x6784;&#x6210;&#x7684;&#x811A;&#x672C;</p>
+<h3 id="&#x6784;&#x5EFA;&#x4E09;&#x6B65;&#x9AA4;&#xFF1A;">&#x6784;&#x5EFA;&#x4E09;&#x6B65;&#x9AA4;&#xFF1A;</h3>
+<pre><code>- &#x7F16;&#x5199;Dockerfile&#x6587;&#x4EF6;
+- docker build
+- docker run
+</code></pre><h3 id="&#x6587;&#x4EF6;&#x4EC0;&#x4E48;&#x6837;&#xFF1F;">&#x6587;&#x4EF6;&#x4EC0;&#x4E48;&#x6837;&#xFF1F;</h3>
+<p>&#x4EE5;centos&#x4E3A;&#x4F8B;&#xFF1A; <a href="https://hub.docker.com/_centos/" target="_blank">https://hub.docker.com/_centos/</a></p>
+<ul>
+<li><img src="images/dockerFile/docker_hub.png" alt="docker_hub">   </li>
+</ul>
+<hr>
+<h3 id="dockerfile&#x6784;&#x5EFA;&#x8FC7;&#x7A0B;&#x89E3;&#x6790;">DockerFile&#x6784;&#x5EFA;&#x8FC7;&#x7A0B;&#x89E3;&#x6790;</h3>
+<h4 id="dockerfile&#x5185;&#x5BB9;&#x57FA;&#x7840;&#x77E5;&#x8BC6;">DockerFile&#x5185;&#x5BB9;&#x57FA;&#x7840;&#x77E5;&#x8BC6;</h4>
+<pre><code>1. &#x6BCF;&#x6761;&#x4FDD;&#x7559;&#x5B57;&#x6307;&#x4EE4;&#x90FD;&#x5FC5;&#x987B;&#x4E3A;&#x5927;&#x5199;&#x5B57;&#x6BCD; &#x5E76;&#x4E14;&#x540E;&#x9762;&#x8981;&#x8DDF;&#x968F;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;&#x53C2;&#x6570;
+2. &#x6307;&#x4EE4;&#x6309;&#x7167;&#x4ECE;&#x4E0A;&#x5230;&#x4E0B; &#x987A;&#x5E8F;&#x6267;&#x884C;
+3. # &#x8868;&#x793A;&#x6CE8;&#x91CA;
+4. &#x6BCF;&#x6761;&#x6307;&#x4EE4;&#x90FD;&#x4F1A;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x955C;&#x50CF;&#x5C42;&#xFF0C;&#x5E76;&#x5BF9;&#x955C;&#x50CF;&#x8FDB;&#x884C;&#x63D0;&#x4EA4;
+</code></pre><h4 id="docker&#x6267;&#x884C;dockerfile&#x7684;&#x5927;&#x81F4;&#x6D41;&#x7A0B;">Docker&#x6267;&#x884C;DockerFile&#x7684;&#x5927;&#x81F4;&#x6D41;&#x7A0B;</h4>
+<ul>
+<li>docker&#x4ECE;&#x57FA;&#x7840;&#x955C;&#x50CF;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;</li>
+<li>&#x6267;&#x884C;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x5E76;&#x5BF9;&#x5BB9;&#x5668;&#x4F5C;&#x51FA;&#x4FEE;&#x6539;</li>
+<li>&#x6267;&#x884C;&#x7C7B;&#x4F3C;docker commit &#x7684;&#x64CD;&#x4F5C;&#x63D0;&#x4EA4;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x955C;&#x50CF;&#x5C42;</li>
+<li>docker &#x518D;&#x57FA;&#x4E8E;&#x521A;&#x63D0;&#x4EA4;&#x7684;&#x955C;&#x50CF;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;</li>
+<li>&#x6267;&#x884C;dockerfile &#x4E2D;&#x7684;&#x4E0B;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x76F4;&#x5230;&#x6240;&#x6709;&#x7684;&#x6307;&#x4EE4;&#x90FD;&#x6267;&#x884C;&#x5B8C;&#x6210;</li>
+</ul>
+<h4 id="&#x5C0F;&#x603B;&#x7ED3;">&#x5C0F;&#x603B;&#x7ED3;</h4>
+<p>&#x4ECE;&#x5E94;&#x7528;&#x8F6F;&#x4EF6;&#x7684;&#x89D2;&#x5EA6;&#x6765;&#x770B;&#xFF0C; DockerFile&#x3001;Docker&#x955C;&#x50CF;&#x4E0E;Docker&#x5BB9;&#x5668;&#x5206;&#x522B;&#x4EE3;&#x8868;&#x8F6F;&#x4EF6;&#x7684;&#x4E09;&#x4E2A;&#x4E0D;&#x540C;&#x9636;&#x6BB5;</p>
+<pre><code>* Dockerfile &#x662F;&#x8F6F;&#x4EF6;&#x7684;&#x539F;&#x6750;&#x6599;
+* Docker&#x955C;&#x50CF;&#x662F;&#x8F6F;&#x4EF6;&#x7684;&#x4EA4;&#x4ED8;&#x54C1;
+* Docker&#x5BB9;&#x5668;&#x5219;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#x8F6F;&#x4EF6;&#x7684;&#x8FD0;&#x884C;&#x6001;
+</code></pre><p>Dockerfile&#x9762;&#x5411;&#x5F00;&#x53D1;&#xFF0C; Docker&#x955C;&#x50CF;&#x6210;&#x4E3A;&#x4EA4;&#x4ED8;&#x6807;&#x51C6;&#xFF0C; Docker&#x5BB9;&#x5668;&#x5219;&#x6D89;&#x53CA;&#x90E8;&#x7F72;&#x4E0E;&#x8FD0;&#x7EF4;&#xFF0C; &#x4E09;&#x8005;&#x7F3A;&#x4E00;&#x4E0D;&#x53EF;&#xFF0C; &#x5408;&#x529B;&#x5145;&#x5F53;Docker&#x4F53;&#x7CFB;&#x7684;&#x57FA;&#x77F3;&#x3002; </p>
+<p><img src="images/dockerFile/building_summary.png" alt=""></p>
+<p>1  Dockerfile &#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;Dockerfile&#xFF0C; Dockerfile&#x5B9A;&#x4E49;&#x4E86;&#x8FDB;&#x7A0B;&#x9700;&#x8981;&#x7684;&#x4E00;&#x5207;&#x4E1C;&#x897F;&#x3002; Dockerfile&#x6D89;&#x53CA;&#x7684;&#x5185;&#x5BB9;&#x5305;&#x62EC;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x6216;&#x8005;&#x662F;&#x6587;&#x4EF6;&#x3001;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x3001;&#x4F9D;&#x8D56;&#x5305;&#x3001;&#x8FD0;&#x884C;&#x65F6;&#x73AF;&#x5883;&#x3001;&#x52A8;&#x6001;&#x94FE;&#x63A5;&#x5E93;&#x3001;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x53D1;&#x884C;&#x7248;&#x3001;&#x670D;&#x52A1;&#x8FDB;&#x7A0B;&#x548C;&#x5185;&#x6838;&#x8FDB;&#x7A0B;(&#x5F53;&#x5E94;&#x7528;&#x8FDB;&#x7A0B;&#x9700;&#x8981;&#x548C;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&#x548C;&#x5185;&#x6838;&#x8FDB;&#x7A0B;&#x6253;&#x4EA4;&#x9053;&#xFF0C;&#x8FD9;&#x65F6;&#x9700;&#x8981;&#x8003;&#x8651;&#x5427;&#x5982;&#x4F55;&#x8BBE;&#x8BA1;namespace&#x7684;&#x6743;&#x9650;&#x63A7;&#x5236;)&#x7B49;&#x7B49;&#xFF1B;</p>
+<ol>
+<li>Docker&#x955C;&#x50CF;&#xFF0C; &#x5728;&#x7528;Dockerfile &#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C; docker build&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;Docker&#x955C;&#x50CF;&#xFF0C; &#x5F53;&#x8FD0;&#x884C;Docker&#x955C;&#x50CF;&#x65F6;&#xFF0C;&#x4F1A;&#x771F;&#x6B63;&#x5F00;&#x59CB;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x3002; </li>
+<li>Docker&#x5BB9;&#x5668;&#xFF0C; &#x5BB9;&#x5668;&#x76F4;&#x63A5;&#x63D0;&#x4F9B;&#x670D;&#x52A1;&#x7684;&#x3002; </li>
+</ol>
+<hr>
+<h3 id="dockerfile&#x4F53;&#x7CFB;&#x7ED3;&#x6784;&#x4FDD;&#x7559;&#x5B57;&#x6307;&#x4EE4;">DockerFile&#x4F53;&#x7CFB;&#x7ED3;&#x6784;(&#x4FDD;&#x7559;&#x5B57;&#x6307;&#x4EE4;)</h3>
+<ul>
+<li>FROM             &#x57FA;&#x7840;&#x955C;&#x50CF;&#xFF0C; &#x5F53;&#x524D;&#x65B0;&#x955C;&#x50CF;&#x662F;&#x57FA;&#x4E8E;&#x54EA;&#x4E2A;&#x955C;&#x50CF;&#x7684;</li>
+<li>MAINTAINER       &#x955C;&#x50CF;&#x7EF4;&#x62A4;&#x8005;&#x7684;&#x59D3;&#x540D;&#x548C;&#x90AE;&#x7BB1;&#x5730;&#x5740;</li>
+<li>RUN              &#x5BB9;&#x5668;&#x6784;&#x5EFA;&#x65F6;&#x9700;&#x8981;&#x8FD0;&#x884C;&#x7684;&#x547D;&#x4EE4; </li>
+<li>EXPOSE           &#x5F53;&#x524D;&#x5BB9;&#x5668;&#x5BF9;&#x5916;&#x66B4;&#x9732;&#x51FA;&#x7684;&#x7AEF;&#x53E3; </li>
+<li>WORKDIR          &#x6307;&#x5B9A;&#x5728;&#x521B;&#x5EFA;&#x5BB9;&#x5668;&#x540E;&#xFF0C; &#x7EC8;&#x7AEF;&#x9ED8;&#x8BA4;&#x767B;&#x9646;&#x8FDB;&#x6765;&#x7684;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#xFF0C; &#x4E00;&#x4E2A;&#x843D;&#x811A;&#x70B9;</li>
+<li><p>ENV              &#x7528;&#x6765;&#x5728;&#x6784;&#x5EFA;&#x955C;&#x50CF;&#x8FC7;&#x7A0B;&#x4E2D;&#x8BBE;&#x7F6E;&#x73AF;&#x5883;&#x53D8;&#x91CF;</p>
+<ul>
+<li><p>ENV MY_PATH /usr/mytest</p>
+<p>  &#x8FD9;&#x4E2A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x53EF;&#x4EE5;&#x5728;&#x540E;&#x7EED;&#x7684;&#x4EFB;&#x4F55;RUN&#x6307;&#x4EE4;&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;&#x8FD9;&#x5C31;&#x5982;&#x540C;&#x5728;&#x547D;&#x4EE4;&#x524D;&#x9762;&#x6307;&#x5B9A;&#x4E86;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x524D;&#x7F00;&#x4E00;&#x6837;&#xFF1B;</p>
+<p>  &#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x5176;&#x5B83;&#x6307;&#x4EE4;&#x4E2D;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x8FD9;&#x4E9B;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF0C;</p>
+<p>  &#x6BD4;&#x5982;&#xFF1A;WORKDIR $MY_PATH</p>
+</li>
+</ul>
+</li>
+<li>ADD              &#x5C06;&#x5BBF;&#x4E3B;&#x673A;&#x76EE;&#x5F55;&#x4E0B;&#x7684;&#x6587;&#x4EF6;&#x62F7;&#x8D1D;&#x8FDB;&#x955C;&#x50CF;&#x4E14;ADD&#x547D;&#x4EE4;&#x4F1A;&#x81EA;&#x52A8;&#x5904;&#x7406;URL&#x548C;&#x89E3;&#x538B;tar&#x538B;&#x7F29;&#x5305;</li>
+<li>COPY             &#x7C7B;&#x4F3C;ADD&#xFF0C;&#x62F7;&#x8D1D;&#x6587;&#x4EF6;&#x548C;&#x76EE;&#x5F55;&#x5230;&#x955C;&#x50CF;&#x4E2D;&#x5C06;&#x4ECE;&#x6784;&#x5EFA;&#x4E0A;&#x4E0B;&#x6587;&#x76EE;&#x5F55;&#x4E2D;&lt;&#x6E90;&#x8DEF;&#x5F84;&gt;&#x7684;&#x6587;&#x4EF6;/&#x76EE;&#x5F55;&#x590D;&#x5236;&#x5230;&#x65B0;&#x7684;&#x4E00;&#x5C42;&#x7684;&#x955C;&#x50CF;&#x5185;&#x7684;&lt;&#x76EE;&#x6807;&#x8DEF;&#x5F84;&gt;&#x4F4D;&#x7F6E;</li>
+<li>VOLUME           &#x5BB9;&#x5668;&#x6570;&#x636E;&#x5377;&#xFF0C;&#x7528;&#x4E8E;&#x6570;&#x636E;&#x4FDD;&#x5B58;&#x548C;&#x6301;&#x4E45;&#x5316;&#x5DE5;&#x4F5C;</li>
+<li>CMD              &#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x65F6;&#x8981;&#x8FD0;&#x884C;&#x7684;&#x547D;&#x4EE4;<ul>
+<li>CMD &#x6307;&#x4EE4;&#x7684;&#x683C;&#x5F0F;&#x548C; RUN &#x76F8;&#x4F3C;  &#x4E5F;&#x662F;&#x4E24;&#x79CD;&#x683C;&#x5F0F;<ul>
+<li>shell &#x683C;&#x5F0F;&#xFF1A; CMD &lt;&#x547D;&#x4EE4;&gt;</li>
+<li>exec  &#x683C;&#x5F0F;&#xFF1A; CMD [&quot;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&quot;, &quot;&#x53C2;&#x6570;1&quot;, &quot;&#x53C2;&#x6570;2&quot;...]</li>
+<li>&#x53C2;&#x6570;&#x5217;&#x8868;&#x683C;&#x5F0F;&#xFF1A; CMD [&quot;&#x53C2;&#x6570;1&quot;, &quot;&#x53C2;&#x6570;2&quot;...]. &#x5728;&#x6307;&#x5B9A;&#x4E86; ENTRYPOINT &#x6307;&#x4EE4;&#x540E;&#xFF0C; &#x7528;CMD&#x6307;&#x5B9A;&#x5177;&#x4F53;&#x7684;&#x53C2;&#x6570;</li>
+</ul>
+</li>
+<li>DockerFile &#x4E2D;&#x53EF;&#x4EE5;&#x6709;&#x591A;&#x4E2A;cmd&#x6307;&#x4EE4;&#xFF0C; &#x4F46;&#x53EA;&#x6709;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x751F;&#x6548;&#xFF0C; CMD &#x4F1A;&#x88AB;docker run &#x4E4B;&#x540E;&#x7684;&#x53C2;&#x6570;&#x66FF;&#x6362;</li>
+</ul>
+</li>
+<li>ENTRYPOINT       &#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x65F6;&#x8981;&#x8FD0;&#x884C;&#x7684;&#x547D;&#x4EE4;<ul>
+<li>ENTRYPOINT &#x7684;&#x76EE;&#x7684;&#x548C;CMD&#x4E00;&#x6837;&#xFF0C;&#x90FD;&#x662F;&#x5728;&#x6307;&#x5B9A;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x7A0B;&#x5E8F;&#x4EE5;&#x53CA;&#x53C2;&#x6570;</li>
+</ul>
+</li>
+<li>ONBUILD          &#x5F53;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x88AB;&#x7EE7;&#x627F;&#x7684;DockerFile&#x65F6;&#x8FD0;&#x884C;&#x547D;&#x4EE4;&#xFF0C; &#x7236;&#x955C;&#x50CF;&#x5728;&#x88AB;&#x5B50;&#x7EE7;&#x627F;&#x540E;&#x7236;&#x955C;&#x50CF;&#x7684;onbuild&#x88AB;&#x89E6;&#x53D1;     </li>
+</ul>
+<h5 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h5>
+<p><img src="images/dockerFile/docker_file_command.png" alt=""></p>
+<hr>
+<h3 id="docker-file-&#x6848;&#x4F8B;">docker file &#x6848;&#x4F8B;</h3>
+<h4 id="base&#x955C;&#x50CF;scratch">Base&#x955C;&#x50CF;(scratch)</h4>
+<p>Docker Hub&#x4E2D;99%&#x7684;&#x955C;&#x50CF;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x5728;base&#x955C;&#x50CF;&#x4E2D;&#x5B89;&#x88C5;&#x548C;&#x914D;&#x7F6E;&#x9700;&#x8981;&#x7684;&#x8F6F;&#x4EF6;&#x6784;&#x5EFA;&#x51FA;&#x6765;&#x7684;</p>
+<p><img src="images/dockerFile/scratch.png" alt=""></p>
+<h4 id="&#x81EA;&#x5B9A;&#x4E49;&#x955C;&#x50CF;-centos">&#x81EA;&#x5B9A;&#x4E49;&#x955C;&#x50CF; centos</h4>
+<ol>
+<li>&#x7F16;&#x5199;<ol>
+<li>Hub&#x9ED8;&#x8BA4;centos&#x955C;&#x50CF;&#x4EC0;&#x4E48;&#x60C5;&#x51B5;<ol>
+<li>&#x521D;&#x59CB;centos&#x8FD0;&#x884C;&#x8BE5;&#x955C;&#x50CF;&#x65F6;&#x9ED8;&#x8BA4;&#x5728;/&#x76EE;&#x5F55;&#x4E0B;</li>
+<li>&#x9ED8;&#x8BA4;&#x4E0D;&#x652F;&#x6301;vim&#x7F16;&#x8F91;&#x5668;</li>
+<li>&#x9ED8;&#x8BA4;&#x4E0D;&#x652F;&#x6301;ifconfig&#x67E5;&#x770B;&#x7F51;&#x7EDC;&#x914D;&#x7F6E;</li>
+</ol>
+</li>
+<li>&#x51C6;&#x5907;&#x7F16;&#x5199;Dockerfile&#x6587;&#x4EF6;</li>
+<li>mycentos&#x5185;&#x5BB9;Dockerfile<ol>
+<li>FROM centos</li>
+<li>MAINTAINER liushuangdan@csm.com.cn</li>
+<li>ENV MYPATH /usr/local</li>
+<li>WORKDIR $MYPATH</li>
+<li>RUN yum -y install vim</li>
+<li>RUN yum -y install net-tools</li>
+<li>EXPOSE 80</li>
+<li>CMD echo $MYPATH</li>
+<li>CMD echo &quot;success ---- ok&quot;</li>
+<li>CMD /bin/bash</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>&#x6784;&#x5EFA;<ol>
+<li>docker build -t &#x65B0;&#x955C;&#x50CF;&#x540D;&#x5B57;:TAG .</li>
+</ol>
+</li>
+<li>&#x8FD0;&#x884C;<ol>
+<li>docker run -it &#x65B0;&#x955C;&#x50CF;&#x540D;&#x5B57;:TAG </li>
+</ol>
+</li>
+<li>&#x5217;&#x51FA;&#x955C;&#x50CF;&#x7684;&#x53D8;&#x66F4;&#x5386;&#x53F2;<ul>
+<li>docker history &#x955C;&#x50CF;&#x540D;</li>
+</ul>
+</li>
+</ol>
+<h3 id="cmdentrypoint-&#x955C;&#x50CF;&#x6848;&#x4F8B;">CMD/ENTRYPOINT &#x955C;&#x50CF;&#x6848;&#x4F8B;</h3>
+<p>&#x90FD;&#x662F;&#x8981;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x5BB9;&#x5668;&#x542F;&#x52A8;&#x65F6;&#x8981;&#x8FD0;&#x884C;&#x7684;&#x547D;&#x4EE4;</p>
+<p>CMD</p>
+<ul>
+<li>Dockerfile&#x4E2D;&#x53EF;&#x4EE5;&#x53C8;&#x591A;&#x4E2A;CMD&#x547D;&#x4EE4;&#xFF0C;&#x4F46;&#x662F;&#x53EA;&#x6709;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x751F;&#x6548;&#xFF0C;CMD&#x4F1A;&#x88AB;docker run &#x4E4B;&#x540E;&#x7684;&#x53C2;&#x6570;&#x66FF;&#x6362;</li>
+<li>Case tomcat &#x7684;&#x8BB2;&#x89E3;&#x6F14;&#x793A; docker run -it -p 8888:8080 tomcat ls -l</li>
+</ul>
+<p>ENTRYPOINT </p>
+<ul>
+<li>docker run &#x4E4B;&#x540E;&#x7684;&#x53C2;&#x6570;&#x4F1A;&#x88AB;&#x5F53;&#x505A;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7ED9;ENTRYPOINT&#xFF0C;&#x4E4B;&#x540E;&#x5F62;&#x6210;&#x65B0;&#x7684;&#x547D;&#x4EE4;&#x7EC4;&#x5408;</li>
+<li><p>Case </p>
+<ul>
+<li>&#x5236;&#x4F5C;CMD&#x7248;&#x53EF;&#x4EE5;&#x67E5;&#x8BE2;IP&#x4FE1;&#x606F;&#x7684;&#x5BB9;&#x5668;<pre><code>FROM centos
+RUN yum install -y curl
+CMD [ &quot;curl&quot;, &quot;-s&quot;, &quot;http://ip.cn&quot; ]
+</code></pre></li>
+<li><p>crul &#x547D;&#x4EE4;&#x89E3;&#x91CA;</p>
+<pre><code>curl&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x6267;&#x884C;&#x4E0B;&#x8F7D;&#x3001;&#x53D1;&#x9001;&#x5404;&#x79CD;HTTP&#x8BF7;&#x6C42;&#xFF0C;&#x6307;&#x5B9A;HTTP&#x5934;&#x90E8;&#x7B49;&#x64CD;&#x4F5C;&#x3002;
+
+&#x5982;&#x679C;&#x7CFB;&#x7EDF;&#x6CA1;&#x6709;curl&#x53EF;&#x4EE5;&#x4F7F;&#x7528;yum install curl&#x5B89;&#x88C5;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D;&#x5B89;&#x88C5;&#x3002;
+
+curl&#x662F;&#x5C06;&#x4E0B;&#x8F7D;&#x6587;&#x4EF6;&#x8F93;&#x51FA;&#x5230;stdout
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<pre><code>    &#x4F7F;&#x7528;&#x547D;&#x4EE4;&#xFF1A;curl http://www.baidu.com
+
+    &#x6267;&#x884C;&#x540E;&#xFF0C;www.baidu.com&#x7684;html&#x5C31;&#x4F1A;&#x663E;&#x793A;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x4E86;
+
+
+
+    &#x8FD9;&#x662F;&#x6700;&#x7B80;&#x5355;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x3002;&#x7528;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x83B7;&#x5F97;&#x4E86;http://curl.haxx.se&#x6307;&#x5411;&#x7684;&#x9875;&#x9762;&#xFF0C;&#x540C;&#x6837;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x91CC;&#x7684;URL&#x6307;&#x5411;&#x7684;&#x662F;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x6216;&#x8005;&#x4E00;&#x5E45;&#x56FE;&#x90FD;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4E0B;&#x8F7D;&#x5230;&#x672C;&#x5730;&#x3002;&#x5982;&#x679C;&#x4E0B;&#x8F7D;&#x7684;&#x662F;HTML&#x6587;&#x6863;&#xFF0C;&#x90A3;&#x4E48;&#x7F3A;&#x7701;&#x7684;&#x5C06;&#x53EA;&#x663E;&#x793A;&#x6587;&#x4EF6;&#x5934;&#x90E8;&#xFF0C;&#x5373;HTML&#x6587;&#x6863;&#x7684;header&#x3002;&#x8981;&#x5168;&#x90E8;&#x663E;&#x793A;&#xFF0C;&#x8BF7;&#x52A0;&#x53C2;&#x6570; -i
+</code></pre><ul>
+<li><p>&#x95EE;&#x9898; &#x5982;&#x679C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x663E;&#x793A;HTTP&#x5934;&#x4FE1;&#x606F;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x52A0;&#x4E0A;-i&#x53C2;&#x6570; </p>
+<pre><code>docker run myip -i &#x62A5;&#x9519;
+![myip error](images/dockerFile/file_error.png)
+why&#xFF1A; 
+
+    &#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#x627E;&#x4E0D;&#x5230;&#x7684;&#x62A5;&#x9519;&#xFF0C;executable file not found&#x3002;
+
+    &#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x8BF4;&#x8FC7;&#xFF0C;&#x8DDF;&#x5728;&#x955C;&#x50CF;&#x540D;&#x540E;&#x9762;&#x7684;&#x662F; command&#xFF0C;&#x8FD0;&#x884C;&#x65F6;&#x4F1A;&#x66FF;&#x6362; CMD &#x7684;&#x9ED8;&#x8BA4;&#x503C;&#x3002;
+
+    &#x56E0;&#x6B64;&#x8FD9;&#x91CC;&#x7684; -i &#x66FF;&#x6362;&#x4E86;&#x539F;&#x6765;&#x7684; CMD&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x6DFB;&#x52A0;&#x5728;&#x539F;&#x6765;&#x7684; curl -s http://ip.cn &#x540E;&#x9762;&#x3002;&#x800C; -i &#x6839;&#x672C;&#x4E0D;&#x662F;&#x547D;&#x4EE4;&#xFF0C;&#x6240;&#x4EE5;&#x81EA;&#x7136;&#x627E;&#x4E0D;&#x5230;&#x3002;
+
+    &#x90A3;&#x4E48;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x52A0;&#x5165; -i &#x8FD9;&#x53C2;&#x6570;&#xFF0C;&#x6211;&#x4EEC;&#x5C31;&#x5FC5;&#x987B;&#x91CD;&#x65B0;&#x5B8C;&#x6574;&#x7684;&#x8F93;&#x5165;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#xFF1A;
+
+    $ docker run myip curl -s http://ip.cn -i
+</code></pre></li>
+<li><p>&#x5236;&#x4F5C;ENTRYPOINT &#x7248;&#x67E5;&#x8BE2;IP&#x4FE1;&#x606F;&#x7684;&#x5BB9;&#x5668;</p>
+<pre><code>    FROM centos
+
+    RUN yum install -y curl
+
+    ENTRYPOINT [ &quot;curl&quot;, &quot;-s&quot;, &quot;http://ip.cn&quot; ]
+</code></pre><p><img src="images/dockerFile/myip-i.png" alt="myip-i"></p>
+</li>
+</ul>
+<h4 id="&#x81EA;&#x5B9A;&#x4E49;&#x955C;&#x50CF;tomcat">&#x81EA;&#x5B9A;&#x4E49;&#x955C;&#x50CF;Tomcat</h4>
+<ol>
+<li>mkdir -p /zzyyuse/mydockerfile/tomcat9</li>
+<li>&#x5728;&#x4E0A;&#x8FF0;&#x76EE;&#x5F55;&#x4E0B;touch.txt</li>
+<li>&#x5C06;jdk&#x548C;tomcat&#x5B89;&#x88C5;&#x7684;&#x538B;&#x7F29;&#x5305;&#x62F7;&#x8D1D;&#x8FDB;&#x4E0A;&#x4E00;&#x6B65;&#x76EE;&#x5F55;<ol>
+<li>apache-tomcat-9.0.8.tar.gz (cp /opt/apache-tomcat-9.0.8.tar.gz .)</li>
+<li>jdk-8u171-linux-x64.tar.gz (cp /opt/jdk-8u171-linux-x64.tar.gz .)</li>
+</ol>
+</li>
+<li>&#x5728;/zzyyuse/mydockerfile/tomcat9&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA;Dockerfile&#x6587;&#x4EF6;<pre><code> FROM         centos
+ MAINTAINER    zzyy&lt;zzyybs@126.com&gt;
+ #&#x628A;&#x5BBF;&#x4E3B;&#x673A;&#x5F53;&#x524D;&#x4E0A;&#x4E0B;&#x6587;&#x7684;c.txt&#x62F7;&#x8D1D;&#x5230;&#x5BB9;&#x5668;/usr/local/&#x8DEF;&#x5F84;&#x4E0B;
+ COPY c.txt /usr/local/cincontainer.txt
+ #&#x628A;java&#x4E0E;tomcat&#x6DFB;&#x52A0;&#x5230;&#x5BB9;&#x5668;&#x4E2D;
+ ADD jdk-8u171-linux-x64.tar.gz /usr/local/
+ ADD apache-tomcat-9.0.8.tar.gz /usr/local/
+ #&#x5B89;&#x88C5;vim&#x7F16;&#x8F91;&#x5668;
+ RUN yum -y install vim
+ #&#x8BBE;&#x7F6E;&#x5DE5;&#x4F5C;&#x8BBF;&#x95EE;&#x65F6;&#x5019;&#x7684;WORKDIR&#x8DEF;&#x5F84;&#xFF0C;&#x767B;&#x5F55;&#x843D;&#x811A;&#x70B9;
+ ENV MYPATH /usr/local
+ WORKDIR $MYPATH
+ #&#x914D;&#x7F6E;java&#x4E0E;tomcat&#x73AF;&#x5883;&#x53D8;&#x91CF;
+ ENV JAVA_HOME /usr/local/jdk1.8.0_171
+ ENV CLASSPATH $JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+ ENV CATALINA_HOME /usr/local/apache-tomcat-9.0.8
+ ENV CATALINA_BASE /usr/local/apache-tomcat-9.0.8
+ ENV PATH $PATH:$JAVA_HOME/bin:$CATALINA_HOME/lib:$CATALINA_HOME/bin
+ #&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65F6;&#x76D1;&#x542C;&#x7684;&#x7AEF;&#x53E3;
+ EXPOSE  8080
+ #&#x542F;&#x52A8;&#x65F6;&#x8FD0;&#x884C;tomcat
+ # ENTRYPOINT [&quot;/usr/local/apache-tomcat-9.0.8/bin/startup.sh&quot; ]
+ # CMD [&quot;/usr/local/apache-tomcat-9.0.8/bin/catalina.sh&quot;,&quot;run&quot;]
+ CMD /usr/local/apache-tomcat-9.0.8/bin/startup.sh &amp;&amp; tail -F /usr/local/apache-tomcat-9.0.8/bin/logs/catalina.out
+</code></pre></li>
+<li>&#x6784;&#x5EFA;docker build -t zzyytomcat9 .
+<img src="images/dockerFile/zzyytomcat9_build.png" alt="build"></li>
+<li>&#x6784;&#x5EFA;&#x5B8C;&#x6210;
+<img src="images/dockerFile/tomcat_build_finish.png" alt="build_finish"></li>
+<li><p>run</p>
+<pre><code>     docker run -d -p 9080:8080 --name myt9 -v /zzyyuse/mydockerfile/tomcat9/test:/usr/local/apache-tomcat-9.0.8/webapps/test -v /zzyyuse/mydockerfile/tomcat9/tomcat9logs/:/usr/local/apache-tomcat-9.0.8/logs --privileged=true zzyytomcat9
+</code></pre><p><img src="images/dockerFile/tomcat_run.png" alt="run"></p>
+<p>&#x62A5;&#x9519;&#x5907;&#x6CE8;&#xFF1A;</p>
+<p> Docker&#x6302;&#x8F7D;&#x4E3B;&#x673A;&#x76EE;&#x5F55;Docker&#x8BBF;&#x95EE;&#x51FA;&#x73B0;cannot open directory .: Permission denied</p>
+<p> &#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x5728;&#x6302;&#x8F7D;&#x76EE;&#x5F55;&#x540E;&#x591A;&#x52A0;&#x4E00;&#x4E2A;--privileged=true&#x53C2;&#x6570;&#x5373;&#x53EF;</p>
+</li>
+<li>&#x9A8C;&#x8BC1;
+ <img src="images/dockerFile/check_tomcat.png" alt="check"></li>
+<li><p>&#x7ED3;&#x5408;&#x524D;&#x8FF0;&#x7684;&#x5BB9;&#x5668;&#x5377;&#x5C06;&#x6D4B;&#x8BD5;&#x7684;web&#x670D;&#x52A1;test&#x53D1;&#x5E03;</p>
+<ol>
+<li>&#x603B;&#x4F53;&#x6982;&#x8FF0;
+ <img src="images/dockerFile/&#x603B;&#x4F53;&#x6982;&#x8FF0;.png" alt="&#x603B;&#x4F53;&#x6982;&#x8FF0;"></li>
+<li><p>web.xml
+ ```</p>
+<pre><code> &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+
+ &lt;web-app xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+
+ xmlns=&quot;http://java.sun.com/xml/ns/javaee&quot;
+
+ xsi:schemaLocation=&quot;http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd&quot;
+
+ id=&quot;WebApp_ID&quot; version=&quot;2.5&quot;&gt;
+</code></pre></li>
+</ol>
+</li>
+</ol>
+<pre><code>        &lt;display-name&gt;test&lt;/display-name&gt;
+
+
+
+        &lt;/web-app&gt;
+    ```
+</code></pre><ol>
+<li><p>a.jsp</p>
+<pre><code> &lt;%@ page language=&quot;java&quot; contentType=&quot;text/html; charset=UTF-8&quot; pageEncoding=&quot;UTF-8&quot;%&gt;
+
+ &lt;!DOCTYPE html PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot; &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+
+ &lt;html&gt;
+
+ &lt;head&gt;
+
+     &lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot;&gt;
+
+     &lt;title&gt;Insert title here&lt;/title&gt;
+
+ &lt;/head&gt;
+
+ &lt;body&gt;
+
+     -----------welcome------------
+
+     &lt;%=&quot;i am in docker tomcat self &quot;%&gt;
+
+     &lt;br&gt;
+
+     &lt;br&gt;
+
+     &lt;% System.out.println(&quot;=============docker tomcat self&quot;);%&gt;
+
+ &lt;/body&gt;
+
+ &lt;/html&gt;
+</code></pre></li>
+<li><p>&#x6D4B;&#x8BD5;
+ <img src="images/dockerFile/&#x6D4B;&#x8BD5;1.png" alt="&#x6D4B;&#x8BD5;1">
+ <img src="images/dockerFile/&#x6D4B;&#x8BD5;2.png" alt="&#x6D4B;&#x8BD5;2">
+ <img src="images/dockerFile/&#x6D4B;&#x8BD5;.png" alt="&#x6D4B;&#x8BD5;"></p>
+</li>
+</ol>
+<h3 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h3>
+<p><img src="images/dockerFile/&#x603B;&#x7ED3;.png" alt="&#x603B;&#x7ED3;"></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Docker容器数据卷.html" class="navigation navigation-prev " aria-label="Previous page: Docker容器数据卷">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="Docker常用安装.html" class="navigation navigation-next " aria-label="Next page: Docker常用安装">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"DockerFile解析","level":"1.4.3","depth":2,"next":{"title":"Docker常用安装","level":"1.4.4","depth":2,"path":"Docker常用安装.md","ref":"Docker常用安装.md","articles":[]},"previous":{"title":"Docker容器数据卷","level":"1.4.2","depth":2,"path":"Docker容器数据卷.md","ref":"Docker容器数据卷.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"DockerFile解析.md","mtime":"2021-03-19T07:33:07.516Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-19T07:46:19.806Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

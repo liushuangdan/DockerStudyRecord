@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Docker常用命令 · GitBook</title>
+        <title>Docker常用安装 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,8 +57,10 @@
     <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Docker镜像命令.html" />
+    <link rel="next" href="本地镜像发布到阿里云.html" />
     
+    
+    <link rel="prev" href="DockerFile解析.html" />
     
 
     </head>
@@ -198,7 +200,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.3.1" data-path="Docker常用命令.html">
+        <li class="chapter " data-level="1.3.1" data-path="Docker常用命令.html">
             
                 <a href="Docker常用命令.html">
             
@@ -295,7 +297,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="Docker常用安装.html">
+        <li class="chapter active" data-level="1.4.4" data-path="Docker常用安装.html">
             
                 <a href="Docker常用安装.html">
             
@@ -356,7 +358,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="." >Docker常用命令</a>
+        <a href="." >Docker常用安装</a>
     </h1>
 </div>
 
@@ -372,19 +374,85 @@
                                 <section class="normal markdown-section">
                                 
                                 <!--
- * @Author: liushuangdan
- * @Date: 2020-07-10 15:03:13
- * @LastEditTime: 2020-08-28 13:22:53
- * @LastEditors: VScode
+ * @Filename: 
  * @Description: 
- * @FilePath: \DockerBook\Docker常用命令.md
+ * @Author: liushuangdan
+ * @Date: 2021-03-19 12:06:24
+ * @LastEditTime: 2021-03-19 15:31:17
+ * @FilePath: \DockerBook\Docker常用安装.md
 -->
-<h1 id="docker-&#x5E38;&#x7528;&#x547D;&#x4EE4;">Docker &#x5E38;&#x7528;&#x547D;&#x4EE4;</h1>
-<h2 id="docker-&#x7684;&#x5E2E;&#x52A9;&#x547D;&#x4EE4;">Docker &#x7684;&#x5E2E;&#x52A9;&#x547D;&#x4EE4;</h2>
+<h2 id="docker&#x5E38;&#x7528;&#x5B89;&#x88C5;">Docker&#x5E38;&#x7528;&#x5B89;&#x88C5;</h2>
+<h3 id="&#x603B;&#x4F53;&#x6B65;&#x9AA4;">&#x603B;&#x4F53;&#x6B65;&#x9AA4;</h3>
+<ol>
+<li>&#x641C;&#x7D22;&#x955C;&#x50CF;</li>
+<li>&#x62C9;&#x53D6;&#x955C;&#x50CF;</li>
+<li>&#x67E5;&#x770B;&#x955C;&#x50CF;</li>
+<li>&#x542F;&#x52A8;&#x955C;&#x50CF;</li>
+<li>&#x505C;&#x6B62;&#x955C;&#x50CF;</li>
+<li>&#x79FB;&#x9664;&#x955C;&#x50CF;</li>
+</ol>
+<h3 id="&#x5B89;&#x88C5;tomcat">&#x5B89;&#x88C5;tomcat</h3>
 <ul>
-<li>docker version</li>
-<li>docker info</li>
-<li>docker -help &#x7C7B;&#x4F3C; linux &#x4E2D;&#x7684; man --help</li>
+<li>docker hub&#x4E0A;&#x9762;&#x67E5;&#x627E;tomcat&#x955C;&#x50CF;&#xFF0C; docker search tomcat </li>
+<li>&#x4ECE;docker hub&#x4E0A;&#x62C9;&#x53D6;tomcat&#x955C;&#x50CF;&#x5230;&#x672C;&#x5730;&#xFF0C; docker pull tomcat<ul>
+<li>&#x5B98;&#x7F51;&#x547D;&#x4EE4;
+<img src="images/dockerFile/&#x62C9;&#x53D6;tomcat.png" alt="&#x62C9;&#x53D6;tomcat"></li>
+<li>&#x62C9;&#x53D6;&#x5B8C;&#x6210;</li>
+</ul>
+</li>
+<li>docker images &#x67E5;&#x770B;&#x662F;&#x5426;&#x62C9;&#x53D6;&#x5230;tomcat</li>
+<li>&#x4F7F;&#x7528;tomcat&#x955C;&#x50CF;&#x521B;&#x5EFA;&#x5BB9;&#x5668;(&#x4E5F;&#x53EB;&#x8FD0;&#x884C;&#x955C;&#x50CF;) docker run -it -p 8080:8080 tomcat <ul>
+<li>-p &#x4E3B;&#x673A;&#x7AEF;&#x53E3;&#xFF1A;docker&#x5BB9;&#x5668;&#x7AEF;&#x53E3;</li>
+<li>-P &#x968F;&#x673A;&#x5206;&#x914D;&#x7AEF;&#x53E3; 
+<img src="images/dockerFile/&#x968F;&#x673A;&#x5206;&#x914D;&#x7AEF;&#x53E3;.png" alt="&#x968F;&#x673A;&#x5206;&#x914D;&#x7AEF;&#x53E3;"></li>
+<li>-i &#x4EA4;&#x4E92;</li>
+<li>-t &#x7EC8;&#x7AEF; </li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x5B89;&#x88C5;mysql">&#x5B89;&#x88C5;mysql</h3>
+<ul>
+<li>docker hub&#x4E0A;&#x9762;&#x67E5;&#x627E;mysql &#x955C;&#x50CF;</li>
+<li>&#x4ECE;docker hub&#x4E0A; &#xFF08;&#x963F;&#x91CC;&#x4E91;&#x955C;&#x50CF;&#x52A0;&#x901F;&#x5668;&#xFF09;&#x62C9;&#x53D6;mysql&#x955C;&#x50CF;&#x5230;&#x672C;&#x5730;&#x6807;&#x7B7E;&#x4E3A;5.6</li>
+<li><p>&#x4F7F;&#x7528;mysql5.6&#x955C;&#x50CF;&#x521B;&#x5EFA;&#x5BB9;&#x5668;(&#x4E5F;&#x53EB;&#x8FD0;&#x884C;&#x955C;&#x50CF;)</p>
+<ul>
+<li><p>&#x4F7F;&#x7528;mysql&#x955C;&#x50CF;</p>
+<pre><code>    docker run -p 12345:3306 --name mysql -v /zzyyuse/mysql/conf:/etc/mysql/conf.d -v /zzyyuse/mysql/logs:/logs -v /zzyyuse/mysql/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql:5.6
+
+    &#x547D;&#x4EE4;&#x8BF4;&#x660E;&#xFF1A;
+    -p 12345:3306&#xFF1A;&#x5C06;&#x4E3B;&#x673A;&#x7684;12345&#x7AEF;&#x53E3;&#x6620;&#x5C04;&#x5230;docker&#x5BB9;&#x5668;&#x7684;3306&#x7AEF;&#x53E3;&#x3002;
+    --name mysql&#xFF1A;&#x8FD0;&#x884C;&#x670D;&#x52A1;&#x540D;&#x5B57;
+    -v /zzyyuse/mysql/conf:/etc/mysql/conf.d &#xFF1A;&#x5C06;&#x4E3B;&#x673A;/zzyyuse/mysql&#x5F55;&#x4E0B;&#x7684;conf/my.cnf &#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;&#x7684; /etc/mysql/conf.d
+    -v /zzyyuse/mysql/logs:/logs&#xFF1A;&#x5C06;&#x4E3B;&#x673A;/zzyyuse/mysql&#x76EE;&#x5F55;&#x4E0B;&#x7684; logs &#x76EE;&#x5F55;&#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;&#x7684; /logs&#x3002;
+    -v /zzyyuse/mysql/data:/var/lib/mysql &#xFF1A;&#x5C06;&#x4E3B;&#x673A;/zzyyuse/mysql&#x76EE;&#x5F55;&#x4E0B;&#x7684;data&#x76EE;&#x5F55;&#x6302;&#x8F7D;&#x5230;&#x5BB9;&#x5668;&#x7684; /var/lib/mysql 
+    -e MYSQL_ROOT_PASSWORD=123456&#xFF1A;&#x521D;&#x59CB;&#x5316; root &#x7528;&#x6237;&#x7684;&#x5BC6;&#x7801;&#x3002;
+    -d mysql:5.6 : &#x540E;&#x53F0;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;mysql5.6
+</code></pre><p><code>docker exec -it MySQL&#x8FD0;&#x884C;&#x6210;&#x529F;&#x540E;&#x7684;&#x5BB9;&#x5668;ID     /bin/bash</code>
+<img src="images/dockerFile/mysql&#x542F;&#x52A8;.png" alt="mysql&#x542F;&#x52A8;"></p>
+</li>
+<li>&#x5916;&#x90E8;win10&#x4E5F;&#x6765;&#x94FE;&#x63A5;&#x8FD0;&#x884C;&#x5728;docker&#x4E0A;&#x7684;mysql&#x670D;&#x52A1;
+<img src="images/dockerFile/&#x5916;&#x90E8;&#x94FE;&#x63A5;mysql.png" alt="&#x5916;&#x90E8;&#x94FE;&#x63A5;mysql"></li>
+<li><p>&#x6570;&#x636E;&#x5907;&#x4EFD;&#x5C0F;&#x6D4B;&#x8BD5;</p>
+<p><code>docker exec myql&#x670D;&#x52A1;&#x5BB9;&#x5668;ID sh -c &apos; exec mysqldump --all-databases -uroot -p&quot;123456&quot; &apos; &gt; /zzyyuse/all-databases.sql</code></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x5B89;&#x88C5;redis">&#x5B89;&#x88C5;redis</h3>
+<ul>
+<li>&#x4ECE;docker hub&#x4E0A; &#x963F;&#x91CC;&#x4E91;&#x52A0;&#x901F;&#x5668;&#x62C9;&#x53D6;redis&#x955C;&#x50CF;&#x5230;&#x672C;&#x5730;&#x6807;&#x7B7E;&#x4E3A;3.2</li>
+<li>&#x4F7F;&#x7528;redis 3.2 &#x955C;&#x50CF;&#x521B;&#x5EFA;&#x5BB9;&#x5668; &#xFF08;&#x4E5F;&#x53EB;&#x8FD0;&#x884C;&#x955C;&#x50CF;&#xFF09;<ul>
+<li>&#x4F7F;&#x7528;&#x955C;&#x50CF;<pre><code>    docker run -p 6379:6379 -v /zzyyuse/myredis/data:/data -v /zzyyuse/myredis/conf/redis.conf:/usr/local/etc/redis/redis.conf  -d redis:3.2 redis-server /usr/local/etc/redis/redis.conf --appendonly yes
+</code></pre><img src="images/dockerFile/&#x4F7F;&#x7528;redis&#x955C;&#x50CF;.png" alt="&#x4F7F;&#x7528;redis&#x955C;&#x50CF;"></li>
+<li>&#x5728;&#x4E3B;&#x673A;/zzyyuse/myredis/conf/redis.conf &#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA; redis.conf &#x6587;&#x4EF6; vim /zzyyuse/redis/conf/redis.conf/redis.conf
+<a href="redis.txt">redis.conf</a></li>
+</ul>
+</li>
+<li>&#x6D4B;&#x8BD5;redis-cli &#x94FE;&#x63A5;&#x4E0A;&#x6765;
+  <code>docker exec -it &#x8FD0;&#x884C;&#x7740;Rediis&#x670D;&#x52A1;&#x7684;&#x5BB9;&#x5668;ID redis-cli</code>
+  <img src="images/dockerFile/redis_cli&#x94FE;&#x63A5;.png" alt="redis_cli&#x94FE;&#x63A5;"></li>
+<li>&#x6D4B;&#x8BD5;&#x6301;&#x4E45;&#x5316;&#x6587;&#x4EF6;&#x751F;&#x6210;
+<img src="images/dockerFile/redis&#x6301;&#x4E45;&#x5316;.png" alt="redis&#x6301;&#x4E45;&#x5316;"></li>
 </ul>
 
                                 
@@ -413,8 +481,12 @@
 
             
                 
+                <a href="DockerFile解析.html" class="navigation navigation-prev " aria-label="Previous page: DockerFile解析">
+                    <i class="fa fa-angle-left"></i>
+                </a>
                 
-                <a href="Docker镜像命令.html" class="navigation navigation-next navigation-unique" aria-label="Next page: Docker镜像命令">
+                
+                <a href="本地镜像发布到阿里云.html" class="navigation navigation-next " aria-label="Next page: 本地镜像发布到阿里云">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -425,7 +497,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Docker常用命令","level":"1.3.1","depth":2,"next":{"title":"Docker镜像命令","level":"1.3.2","depth":2,"path":"Docker镜像命令.md","ref":"Docker镜像命令.md","articles":[]},"previous":{"title":"命令","level":"1.3","depth":1,"ref":"","articles":[{"title":"Docker常用命令","level":"1.3.1","depth":2,"path":"Docker常用命令.md","ref":"Docker常用命令.md","articles":[]},{"title":"Docker镜像命令","level":"1.3.2","depth":2,"path":"Docker镜像命令.md","ref":"Docker镜像命令.md","articles":[]},{"title":"Docker容器命令","level":"1.3.3","depth":2,"path":"Docker容器命令.md","ref":"Docker容器命令.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Docker常用命令.md","mtime":"2020-12-23T06:21:06.499Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-19T07:46:19.806Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Docker常用安装","level":"1.4.4","depth":2,"next":{"title":"本地镜像发布到阿里云","level":"1.4.5","depth":2,"path":"本地镜像发布到阿里云.md","ref":"本地镜像发布到阿里云.md","articles":[]},"previous":{"title":"DockerFile解析","level":"1.4.3","depth":2,"path":"DockerFile解析.md","ref":"DockerFile解析.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"Docker常用安装.md","mtime":"2021-03-19T07:31:18.357Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-19T07:46:19.806Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>

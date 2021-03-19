@@ -3,7 +3,7 @@
  * @Description: 
  * @Author: liushuangdan
  * @Date: 2021-02-01 18:07:46
- * @LastEditTime: 2021-03-18 18:22:30
+ * @LastEditTime: 2021-03-19 11:08:57
  * @FilePath: \DockerBook\DockerFile解析.md
 -->
 
@@ -258,3 +258,67 @@ ENTRYPOINT
 8. 验证
     ![check](images/dockerFile/check_tomcat.png)
 9. 结合前述的容器卷将测试的web服务test发布
+   1.  总体概述
+        ![总体概述](./images/dockerFile/总体概述.png)
+   2.  web.xml
+        ```
+            <?xml version="1.0" encoding="UTF-8"?>
+
+            <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+
+            xmlns="http://java.sun.com/xml/ns/javaee"
+
+            xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+
+            id="WebApp_ID" version="2.5">
+
+            
+
+            <display-name>test</display-name>
+
+            
+
+            </web-app>
+        ```
+   3.  a.jsp
+    ```
+        <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+        <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+        <html>
+
+        <head>
+
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+            <title>Insert title here</title>
+
+        </head>
+
+        <body>
+
+            -----------welcome------------
+
+            <%="i am in docker tomcat self "%>
+
+            <br>
+
+            <br>
+
+            <% System.out.println("=============docker tomcat self");%>
+
+        </body>
+
+        </html>
+
+    ```
+
+   4.  测试
+        ![测试1](images/dockerFile/测试1.png)
+        ![测试2](images/dockerFile/测试2.png)
+        ![测试](images/dockerFile/测试.png)
+
+### 总结
+
+![总结](images/dockerFile/总结.png)

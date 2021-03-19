@@ -1,8 +1,8 @@
 <!--
  * @Author: liushuangdan
  * @Date: 2020-08-28 16:35:24
- * @LastEditTime: 2020-08-31 14:49:28
- * @LastEditors: VScode
+ * @LastEditTime: 2021-03-19 15:33:08
+ * @LastEditors: Please set LastEditors
  * @Description: 
  * @FilePath: \DockerBook\Docker容器命令.md
 -->
@@ -58,7 +58,9 @@
     - docker run -d 容器名称或者容器id
     #使用镜像centos：latest 以后台模式启动一个容器
     docker run -d centos
+    
 ##### 问题： 然后 docker ps -a 进行查看， 会发现容器已经退出
+
     很重要的要说明一点，**Docker容器后台运行，就必须有一个前台进程。**
 容器运行的命令如果不是那些 一直挂起的命令 (比如运行top，tail)，就是会自动退出的。
 
